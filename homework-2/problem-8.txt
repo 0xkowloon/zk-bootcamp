@@ -1,0 +1,17 @@
+What is the size of the smallest possible group? (Remember, a group is a set, so this is asking how large the set is)
+
+The size of the smallest possible group is 1 with the only element in the set being e the identity element
+
+Substituting e for 1 under multiplication as an example,
+
+- closure: 1 * 1 = 1
+- associativity (1 * 1) * 1 = 1 * (1 * 1) = 1
+- identity: 1 * 1 = 1 (a * e = a with a == e)
+- inverse: 1 * 1 = 1 (a * a**-1 = e)
+
+For addition, e is 0
+
+- closure: 0 + 0 = 0
+- associativity (0 + 0) + 0 = 0 + (0 + 0) = 0
+- identity: 0 + 0 = 0 (a + e = a with a == e)
+- inverse: 0 + 0 = 0 (a + -a = e)
