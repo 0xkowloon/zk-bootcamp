@@ -1,0 +1,9 @@
+What algebraic structure is all odd integers under multiplication?
+
+It is a monoid because it fulfills the following requirements:
+
+- closure: 2 odd integers under multiplication results in another odd integer, which is also in the monoid
+- associativity: (a * b) * c = a * (b * c)
+- having an identity element: 1 is the identity element because a * 1 = a
+- having an inverse: for each positive a there is not an inverse because the inverse is `1 / a` which isn't an integer.
+                     It is worth noting that all negative odd integers have a multiplicative inverse of -1
