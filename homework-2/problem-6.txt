@@ -1,0 +1,11 @@
+Suppose our set is all rational numbers $\mathbb{Q}$ except $0$ and our binary operator is division. What algebraic structure is this?
+
+It is a non-associative group because it fulfills the following requirements:
+
+- closure: Any rational number divided by another rational number results in a rational number, which is also in the non-associative group
+- associativity: The division of a rational number by another rational number is not associative, (a / b) / c != a / (b / c)
+- having an identity element: Having an identity element means there needs to be a number e where a / e = a and e / a = a.
+                              For a / e = a, e has to be equal to 1. But for e / a = a, e has to be equal to a**2, which is not equal to 1.
+                              Therefore, there is not an identity element in the set of all rational numbers except Q under division.
+- having an inverse: Having an inverse means for any rational number a / b there needs to be an inverse that results in the identity element,
+                     but since the set does not have an identity element, there also isn't an inverse.
