@@ -1,0 +1,4 @@
+Let our set be real numbers. Show a binary operator that is not closed
+
+Division is not closed because 0 is in the set and dividing by 0 is undefined
+and undefined is not a real number.

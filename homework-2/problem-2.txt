@@ -1,0 +1,5 @@
+Find a binary operator that is closed but not associative for real numbers
+
+a ** (b ** c) != (a ** b) ** c
+
+a - (b - c) != (a - b) - c
