@@ -1,0 +1,16 @@
+7. Suppose our set is 𓅔 𓆓 **𓆟**
+    a. Define a binary operator that makes it a group. You can define the binary operator’s property by constructing a table where the left two columns are the inputs and the right column is the result. Remember you need to allow that the inputs can be the same, for example (𓅔,𓅔) —> ?
+    b. Define a binary operator that makes it *not* a group (but it should be closed). Hint: if there is no identity element, then it is not a group
+
+First let's just make it a, b and c
+
+7a.  Make b the identity element
+     a,c and c,a = b means a is the inverse of c and vice versa
+
+```
+  | a | b | c |
+---------------
+a | c | a | b |
+b | a | b | c |
+c | b | c | a |
+```
