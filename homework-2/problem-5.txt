@@ -1,0 +1,9 @@
+Let our set be 3 x 2 matrices of integers under addition. What algebraic structure is this?
+
+It is a group because it fulfills the following requirements:
+
+- closure: 2 3 x 2 matrices of integers under addition results in another 3 x 2 matrix which is also in the group
+- associativity: [[a + (b + c), d + (e + f), g + (h + i)], [j + (k + l), m + (n + o), p + (q + r)]] is the same as
+[[(a + b) + c, (d + e) + f, (g + h) + i], [(j + k) + l, (m + n) + o, (p + q) + r]]
+- having an identity element: [[0, 0, 0], [0, 0, 0]] is the identity element
+- having an inverse: for each matrix [[a, b, c], [d, e, f]] there is an inverse of [[-a, -b, -c], [-d, -e, -f]]
