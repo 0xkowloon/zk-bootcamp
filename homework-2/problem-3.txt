@@ -1,0 +1,8 @@
+What algebraic structure (group, monoid, semigroup, etc) is all even integers under addition
+
+It is a group because it fulfills the following requirements:
+
+- closure: 2 even integers under addition results in another even integer, which is also in the group
+- associativity: (a + b) + c = a + (b + c)
+- having an identity element: 0 is the identity element: a + 0 = a
+- having an inverse: for each a, there is an inverse of -a where a + (-a) = 0
