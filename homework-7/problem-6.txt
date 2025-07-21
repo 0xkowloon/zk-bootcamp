@@ -1,0 +1,22 @@
+Create an arithmetic circuit to determine if a signal v is a power of two (1, 2, 4, 8, etc). Hint: create an arithmetic circuit that constrains another set of signals to encode the binary representation of v, then place additional restrictions on those signals.
+
+All numbers that are a power of 2 in its binary form has its MSB as 1 and the rest of the bits 0
+
+1 = 1
+2 = 10
+4 = 100
+8 = 1000
+16 = 10000
+...
+
+Let's say x₁, x₂, …, xₙ are each of the number's bits. The nth bit must be 1 and the rest must be 0.
+
+xₙ === 1
+...
+x₂ === 0
+x₁ === 0
+
+Then, we can create another constraint to prove (2 ** (n - 1)) * xₙ is equal to v because xₙ is constrained to be 1 from the previous circuit.
+We already have constraints on the non-MSB. As they are all 0, we don't have to add the multiplication of the rest of the bits in the constraint below.
+
+v === (2 ** (n - 1)) * xₙ

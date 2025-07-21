@@ -1,0 +1,53 @@
+Create an arithmetic circuit that constrains k to be the maximum of x, y, or z. That is, k should be equal to x if x is the maximum value, and same for y and z.
+
+First let's assume x,y and z are at most 3 bits each
+
+For each pair of numbers (xy, yz, xz):
+
+```
+// u and v are represented with at most 3 bits:
+2²a₂ + 2¹a₁ + a₀ === u
+2²b₂ + 2¹b₁ + b₀ === v
+
+// 0 1 constraints for aᵢ, bᵢ
+a₀(a₀ - 1) === 0
+a₁(a₁ - 1) === 0
+a₂(a₂ - 1) === 0
+b₀(b₀ - 1) === 0
+b₁(b₁ - 1) === 0
+b₂(b₂ - 1) === 0
+
+// 2ⁿ⁻¹ + (u - v) binary representation
+2³ + (u - v) === 8c₃ + 4c₂ + 2c₁ + c₀
+
+// 0 1 constraints for cᵢ
+c₀(c₀ - 1) === 0
+c₁(c₁ - 1) === 0
+c₂(c₂ − 1) === 0
+c₃(c₃ − 1) === 0
+
+// Check that the MSB is 1
+c₃ === 1
+```
+
+```
+(xy_c₃ * xz_c₃ * x) + ((1 - xy_c₃) * yz_c₃ * y) + ((1 - xz_c₃) * (1 - yz_c₃) * z) === k
+```
+
+When x is the greatest, then xy_c₃ === 1 and xz_c₃ === 1, yz_c₃ can be 0 or 1
+
+```
+(1 * 1 * x) + ((1 - 1) * (0 || 1) * y) + ((1 - 1) * (0 || 1) * z) = x
+```
+
+When y is the greatest, then yx_c₃ === 1 and yz_c₃ === 1, xz_c₃ can be 0 or 1
+
+```
+((1 - 1) * (0 || 1) * x) + (1 * 1 * y) + ((0 || 1) * (1 - 1) * z) = y
+```
+
+When z is the greatest, then zx_c₃ === 1 and zy_c₃ === 1, xz_c₃ can be 0 or 1
+
+```
+((0 || 1) * (1 - 1) * x) + ((0 || 1) * (1 - 1) * y) + (1 * 1 * z) = z
+```

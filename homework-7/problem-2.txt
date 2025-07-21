@@ -1,0 +1,3 @@
+Create an arithmetic circuit that takes signals x₁, x₂, …, xₙ and is satsified if all signals are 1.
+
+x₁ * x₂ * ... * xₙ === 1

@@ -1,0 +1,32 @@
+Create an arithmetic circuit that models the Subset sum problem. Given a set of integers (assume they are all non-negative), determine if there is a subset that sums to a given value.
+
+Hint
+
+Use a “switch” that is 0 or 1 if a number is part of the subset or not.
+
+
+We can determine if there is a subset that sums to a given value by adding all the integers in a set together, each multiplied by 0 or 1, and check if it is equal to the given value.
+
+Let's say there are n integers in a set and each integer is defined as x₁, x₂, ... and xₙ. If a subset of the set sums to a value k, there exists a combination of "switch" (s)
+such that
+
+Each switch must be 0 or 1:
+
+s₁ * (s₁ - 1) === 0
+s₂ * (s₂ - 1) === 0
+sₙ * (sₙ - 1) === 0
+
+The sum of each integer in the set multiplied by its corresponding switch is equal to k
+
+x₁ * s₁ + x₂ * s₂ + xₙ * sₙ === k
+
+In the sample set {3,5,17,21} and k = 22
+
+3 * 0 + 5 * 1 + 17 * 1 + 21 * 0 = 22
+
+The witness is
+
+s1 = 0
+s2 = 1
+s3 = 1
+s4 = 0

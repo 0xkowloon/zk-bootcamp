@@ -1,0 +1,20 @@
+Create an arithmetic circuit that takes signals x₁, x₂, …, xₙ, constrains them to be binary, and outputs 1 if at least one of the signals is 1. Hint: this is tricker than it looks. Consider combining what you learned in the first two problems and using the NOT gate.
+
+First we need to create a constraint that each signal to be binary:
+
+x₁(x₁ - 1) === 0
+...
+xₙ(xₙ - 1) === 0
+
+Then we need to create the second constraint that at least one signal is 1. We can prove that by showing not every signal is 0.
+If every signal is 0, we have
+
+(1 - x₁) * (1 - x₂) * (1 - xₙ) === 1
+
+because 1 - 0 = 1 and 1 * 1 * ... * 1 = 1
+
+The negation of the constraint above shows that at least one signal is 1:
+
+1 - ((1 - x₁) * (1 - x₂) * (1 - xₙ)) === 1
+
+because if at least one of the signals is 1, there will be a multiplication by 0, so 1 - 0 = 1

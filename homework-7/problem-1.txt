@@ -1,0 +1,5 @@
+Create an arithmetic circuit that takes signals x₁, x₂, …, xₙ and is satisfied if at least one signal is 0.
+
+x₁ * x₂ * … xₙ === 0
+
+If any of the signal is 0, the result is 0.

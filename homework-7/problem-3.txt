@@ -1,0 +1,29 @@
+A bipartite graph is a graph that can be colored with two colors such that no two neighboring nodes share the same color. Devise an arithmetic circuit scheme to show you have a valid witness of a 2-coloring of a graph. Hint: the scheme in this tutorial needs to be adjusted before it will work with a 2-coloring.
+
+Assume x₁, x₂, ... xₙ are n nodes belonging to a bipartite graph:
+
+```
+c₁: (color) 0
+c₂: (color) 1
+c_sum: c₁ + c₂ = 1
+c₁ + c₁ = 0 + 0 = 0
+c₂ + c₂ = 1 + 1 = 2
+```
+
+All nodes must be 0 or 1:
+
+```
+x₁ * (x₁ - 1) === 0
+...
+xₙ * (xₙ - 1) === 0
+```
+
+All neighboring nodes summed must be equal to 1 and not 0 and 2.
+
+
+```
+(x₁ + x₂) - 1 === 0
+(x₂ + xₙ) - 1 === 0
+...
+(x₁ + xₙ) - 1 === 0
+```
