@@ -1,0 +1,18 @@
+Why does an R1CS require exactly one multiplication per row?
+
+How does this relate to bilinear pairings?
+
+----------------------------------------------------------------------------------------------------------------------
+
+R1CS requires exactly one multiplication per row because each constraint must be expressible as a rank-1 bilinear form: (a·x) * (b·x) = c·x,
+where a, b, c are vectors and x is the witness vector. This ensures the constraint matrix has rank 1, meaning it can be decomposed into the outer product of two vectors.
+
+Having exactly one multiplication per constraint is crucial for arithmetic circuit representation. It creates a standardized format where complex computations are broken
+down into elementary operations that can be efficiently verified.
+
+Relation to bilinear pairings:
+
+In pairing-based SNARKs (like Groth16), the R1CS structure directly maps to bilinear pairing operations. Each R1CS constraint (a·x)(b·x) = c·x becomes a pairing check in the proof system.
+The prover creates polynomial commitments to the a, b, c vectors, and the verifier uses bilinear pairings to check that the constraint relationships hold without learning the actual witness values.
+The rank-1 restriction ensures the pairing-based verification remains efficient. You need exactly one pairing operation per constraint, and the bilinear property of pairings e(g^a, g^b) = e(g, g)^(ab)
+perfectly matches the multiplicative structure of R1CS constraints. A bilinear pairing cannot be paired with another bilinear pair.
